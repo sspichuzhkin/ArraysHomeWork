@@ -1,13 +1,5 @@
 package pro.sky;
-//??? Вопрос. Если задать массив с данными boolean, то не работает условный оператор,
-//    if (b != arr3[arr3.length - 1]) {
-//        System.out.print(b + ",");
-//    } else {
-//        System.out.print(b);
-//    }
-//??? т.е. запятые то ставит, то нет, причем если значения строго только true или false,
-//??? то не ставит совсем.
-// С чем это связано?
+
 public class Main {
     public static void main(String[] args) {
         Task1_1();
@@ -20,9 +12,9 @@ public class Main {
 
     public static int[] Task1_1() {
         int[] arr1 = new int[3];
-        arr1[0] = 7;
-        arr1[1] = 8;
-        arr1[2] = 9;
+        arr1[0] = 1;
+        arr1[1] = 2;
+        arr1[2] = 3;
         return arr1;
     }
 
@@ -36,29 +28,29 @@ public class Main {
 
     public static void Task2() {
         int[] arr1 = Main.Task1_1();
-        for (int j : arr1) {
-            if (j != arr1[arr1.length - 1]) {
-                System.out.print(j + ", ");
+        for (int j = 0; j < arr1.length; j++) {
+            if (j != arr1.length - 1) {
+                System.out.print(arr1[j] + ", ");
             } else {
-                System.out.print(j);
+                System.out.print(arr1[j]);
             }
         }
         System.out.println();
         double[] arr2 = Main.Task1_2();
-        for (double v : arr2) {
-            if (v != arr2[arr2.length - 1]) {
-                System.out.print(v + ", ");
+        for (int v = 0; v < arr2.length; v++) {
+            if (v != arr2.length - 1) {
+                System.out.print(arr2[v] + ", ");
             } else {
-                System.out.print(v);
+                System.out.print(arr2[v]);
             }
         }
         System.out.println();
         long[] arr3 = Main.Task1_3();
-        for (long b : arr3) {
-            if (b != arr3[arr3.length - 1]) {
-                System.out.print(b + ", ");
+        for (int b = 0; b < arr3.length; b++) {
+            if (b != arr3.length - 1) {
+                System.out.print(arr3[b] + ", ");
             } else {
-                System.out.print(b);
+                System.out.print(arr3[b]);
             }
         }
         System.out.println();
@@ -98,10 +90,10 @@ public class Main {
         int[] arr1 = Main.Task1_1();
         for (int j = 0; j < arr1.length; j++) {
             if (arr1[j] % 2 != 0) {
-                arr1[j] = arr1[j] + 1;
+                System.out.println(++arr1[j]);
+            } else {
+                System.out.println(arr1[j]);
             }
-            System.out.println(arr1[j]);
         }
     }
 }
-
